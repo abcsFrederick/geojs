@@ -7,6 +7,7 @@
 
 ### Improvements
 - Points with small radii or thin strokes are rendered better (#1021)
+- Less data is transfered to the GPU when only styles have changed in webgl line or polygon features (#1016)
 
 ### Changes
 - Switched the default tile server to Stamen Design's toner-lite. (#1020)
