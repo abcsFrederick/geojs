@@ -8,6 +8,7 @@
 ### Improvements
 - Points with small radii or thin strokes are rendered better (#1021)
 - When only updating point styles, don't recompute geometry transforms (#1022)
+- WebGL point features automatically use the most memory-efficient primitive shape for the point sizes used based on the system's graphics capabilities (#1031)
 
 ### Changes
 - Switched the default tile server to Stamen Design's toner-lite. (#1020)
