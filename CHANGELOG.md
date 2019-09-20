@@ -3,7 +3,8 @@
 ## Unreleased
 
 ### Features
-- The osmLayer now has predefined `tileSources` that can be used with the `source` method or property to switch multiple parameters at once. (#1020)
+- The osmLayer now has predefined `tileSources` that can be used with the `source` method or property to switch multiple parameters at once (#1020)
+- Added a marker feature (#1035)
 
 ### Improvements
 - Points with small radii or thin strokes are rendered better (#1021)
@@ -12,10 +13,10 @@
 - WebGL point features automatically use the most memory-efficient primitive shape for the point sizes used based on the system's graphics capabilities (#1031)
 
 ### Changes
-- Switched the default tile server to Stamen Design's toner-lite. (#1020)
+- Switched the default tile server to Stamen Design's toner-lite (#1020)
 
 ### Bug Fixes
-- Mouse wheel events didn't recompute gcs coordinates, so a wheel event without a previous move event coult list the wrong location (#1027)
+- Mouse wheel events didn't recompute gcs coordinates, so a wheel event without a previous move event could list the wrong location (#1027)
 - Original event data was not included with actionwheel events (#1030)
 
 ## Version 0.19.6

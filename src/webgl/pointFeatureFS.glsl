@@ -15,7 +15,7 @@ void pointFeatureFragment(float rad) {
   if (rad > 1.0)
     discard;
   // If there is no stroke, the fill region should transition to nothing
-  if (strokeColorVar.a == 0.0) {
+  if (strokeColorVar.a == 0.0 || strokeWidthVar <= 0.0) {
     strokeColor = vec4(fillColorVar.rgb, 0.0);
     endStep = 1.0;
   } else {
@@ -29,7 +29,7 @@ void pointFeatureFragment(float rad) {
     fillColor = fillColorVar;
   // Distance to antialias over.  First number is in pixels
   float antialiasDist = 1.5 / (radiusVar + strokeWidthVar);
-  if (rad < endStep) {
+  if (rad <= endStep) {
     float step = smoothstep(max(0.0, endStep - antialiasDist), endStep, rad);
     vec4 color = mix(fillColor, strokeColor, step);
     float step2 = smoothstep(max(0.0, 1.0 - antialiasDist), 1.0, rad);
